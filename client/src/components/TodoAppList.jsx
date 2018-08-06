@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './TodoAppList.css';
-import Todo from './Todo';
-import AddEntry from './AddEntry';
+import Todo from './Todo.jsx';
+import AddEntry from './AddEntry.jsx';
 
 class TodoAppList extends Component{
     constructor(props){

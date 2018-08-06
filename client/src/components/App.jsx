@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import TodoAppList from './TodoAppList'
+import TodoAppList from './TodoAppList.jsx';
+import Routes from './Routes.jsx';
 
 class App extends Component {
   // state = {
@@ -23,13 +24,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <div className="App-about">About</div>
-          <div className="App-todo">Todo-list</div>
-        </header>
-        <TodoAppList/>
-      </div>
+      <Routes/>
+
+      // <div className="App">
+      //   <header className="App-header">
+      //     <div className="App-about">About</div>
+      //     <div className="App-todo">Todo-list</div>
+      //   </header>
+      //   <TodoAppList/>
+      // </div>
     );
   }
 }
