@@ -24,15 +24,13 @@ class App extends Component {
 
   render() {
     return (
-      <Routes/>
-
-      // <div className="App">
-      //   <header className="App-header">
-      //     <div className="App-about">About</div>
-      //     <div className="App-todo">Todo-list</div>
-      //   </header>
-      //   <TodoAppList/>
-      // </div>
+      <div className="App">
+          <nav className="App-header">
+            <a className="App-about" href="/about">About</a>
+            <a className="App-todo" href="/todo">Todo-list</a>
+          </nav>
+        <Routes/>
+      </div>
     );
   }
 }

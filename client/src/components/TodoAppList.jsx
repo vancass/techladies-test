@@ -6,7 +6,7 @@ import AddEntry from './AddEntry.jsx';
 class TodoAppList extends Component{
     constructor(props){
         super(props);
-        this.state={todo: ['test to-do', 'todo2']};
+        this.state={todo_notdone: ['test to-do', 'todo2'], todo_done: ['done1','don2']};
         this.addTodo = this.addTodo.bind(this);
         this.removeTodo = this.removeTodo.bind(this);
     }
@@ -25,10 +25,16 @@ class TodoAppList extends Component{
 
     renderList(){
         return(
-            this.state.todo.map(name=>(
-                <Todo key={name} entry={name} removeTodo={this.removeTodo}/>
+            this.state.map(name=>(
+                name.map(name2=>(
+                    <Todo key={name2} entry={name2} removeTodo={this.removeTodo}/>
+                )
             ))
-        );
+        ));
+    }
+
+    checked(){
+
     }
 
     render(){

@@ -1,6 +1,51 @@
 .App-header {
   background-color: #222;
   height: 30px;
-  padding: 20px;
+  padding: 30px;
   color: white;
 }
+
+.App-header a{
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 18px;
+} 
+
+.App-header a:hover{
+  background-color: teal;
+  color: white;
+}
+
+/* nav{
+  margin: 50px;
+} */
+
+/* ul {
+  overflow: auto;
+  list-style-type: none;
+}
+
+li{
+  height: 25px;
+  float: left;
+  margin-right: 0px;
+  border-right: 1px solid #aaa;
+  padding : 0 20px;
+}
+
+li a{
+  text-decoration: none;
+  color: #ccc;
+  font: 25px/1 Helvetica, Verdana, sans-serif;
+  text-transform: uppercase;
+}
+
+li a:hover{
+  color: #666;
+}
+
+li.active a{
+  font-weight: bold;
+  color: #333;
+} */

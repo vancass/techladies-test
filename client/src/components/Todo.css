@@ -1,0 +1,15 @@
+.Todo-delete{
+    display: inline-block;
+    margin-left : 50px;
+    cursor: pointer;
+}
+
+.Todo-entry-done{
+    display: inline-block;
+    text-decoration: line-through;
+}
+
+.Todo-entry-notdone{
+    display : inline-block;
+
+}
