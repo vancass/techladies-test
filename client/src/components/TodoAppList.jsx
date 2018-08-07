@@ -6,18 +6,20 @@ import AddEntry from './AddEntry.jsx';
 class TodoAppList extends Component{
     constructor(props){
         super(props);
-        this.state={todo_notdone: ['test to-do', 'todo2'], todo_done: ['done1','don2']};
+        this.state={todo: [{entry:'test to-do', status: 0}, {entry: 'to d22o2', status: 0}, {entry: 'to do2', status: 1}]};
         this.addTodo = this.addTodo.bind(this);
         this.removeTodo = this.removeTodo.bind(this);
+        this.check = this.check.bind(this);
+        this.uncheck = this.uncheck.bind(this);
     }
 
     addTodo(newEntry){
-        this.setState({todo:[...this.state.todo, newEntry]});
+        this.setState({todo:[...this.state.todo, {entry: newEntry, status: 0}]});
     }
 
     removeTodo(entry){
-        const filteredEntries = this.state.todo.filter(name => {
-            return name !== entry;
+        const filteredEntries = this.state.todo.filter(object => {
+            return object.entry !== entry;
         });
 
         this.setState({todo: filteredEntries});
@@ -25,16 +27,32 @@ class TodoAppList extends Component{
 
     renderList(){
         return(
-            this.state.map(name=>(
-                name.map(name2=>(
-                    <Todo key={name2} entry={name2} removeTodo={this.removeTodo}/>
-                )
-            ))
+            this.state.todo.map((object, index)=>(
+                <Todo key={index} entry={object.entry} status={object.status} removeTodo={this.removeTodo} check={this.check} uncheck={this.uncheck}/>
+            )
         ));
     }
 
-    checked(){
+    check(entry){
+        //Delete 
+        let filteredEntries = this.state.todo.filter(object=>{
+            return object.entry !== entry;
+        })
+        //Add again with new status
+        filteredEntries.push({entry: entry, status: 1});
 
+        this.setState({todo: filteredEntries});
+    }
+
+    uncheck(entry){
+        //Delete
+        let filteredEntries = this.state.todo.filter(object=>{
+            return object.entry !== entry;
+        })
+        //Add again with new status
+        filteredEntries.unshift({entry: entry, status: 0});
+
+        this.setState({todo: filteredEntries});
     }
 
     render(){
