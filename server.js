@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const mongoose = require('mongoose');
 
 const app = express();
 const port = process.env.PORT ||5000;
@@ -17,5 +18,9 @@ if(process.env.NODE_ENV === 'production'){
         res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
     });
 }
+
+//connect to database
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/mern-todo', {useMongoClient: true,})
 
 app.listen(port);

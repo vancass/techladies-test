@@ -1,3 +1,10 @@
 .TodoAppList{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.Todo-title{
     margin-top: 10px;
 }

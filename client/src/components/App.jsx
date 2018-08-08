@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import TodoAppList from './TodoAppList.jsx';
 import Routes from './Routes.jsx';
 
 class App extends Component {
