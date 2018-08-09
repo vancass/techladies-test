@@ -21,7 +21,7 @@ class AddEntry extends Component{
     render(){
         return(
             <div className="AddEntry">
-                <input type="text" onChange={this.updateState} value={this.state.entry}/>
+                <input type="text" className="entry-textbox" onChange={this.updateState} value={this.state.entry}/>
                 <button onClick={this.add}>Add</button>
             </div>
         );

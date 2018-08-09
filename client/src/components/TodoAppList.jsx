@@ -59,6 +59,7 @@ class TodoAppList extends Component{
         return(
             <div className="TodoAppList">
                 <AddEntry addTodo={this.addTodo}/>
+                <div className="Todo-title"><h2>To-do:</h2></div>
                 {this.renderList()}
             </div>
         );
