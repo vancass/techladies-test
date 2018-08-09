@@ -1,15 +1,15 @@
 .App-header {
-  background-color: #222;
+  background-color: #B0C4B1;
   height: 30px;
   padding: 30px;
-  color: white;
 }
 
 .App-header a{
-  color: white;
+  color: #222;
   text-align: center;
   padding: 12px;
   font-size: 18px;
+  font-weight: bold;
 } 
 
 .App-header a:hover{
