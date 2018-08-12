@@ -27,7 +27,7 @@ class Todo extends Component{
         return(
             <ul>
                 <li className="Todo">
-                    <input type="checkbox" checked={checked} onChange={this.checkboxChanged}/>
+                    <input type="checkbox" className="checkbox" checked={checked} onChange={this.checkboxChanged}/>
                     <div className={todo_entry_class}>{this.props.entry}</div> 
                     <div className="Todo-delete" onClick={this.removeTodo}>X</div>
                 </li>

@@ -8,3 +8,17 @@
 .entry-textbox:focus{
     outline: none;
 }
+
+.add-btn{
+    float: right;
+    margin: 0 0 0 10px;
+    border-radius: 5px;
+    padding: 0;
+    width: 70px;
+    height: 35px;
+}
+
+.add-btn:hover{
+    background-color: aliceblue;
+    cursor: pointer;
+}

@@ -6,7 +6,7 @@ import AddEntry from './AddEntry.jsx';
 class TodoAppList extends Component{
     constructor(props){
         super(props);
-        this.state={todo: [{entry:'test to-do', status: 0}, {entry: 'to d22o2', status: 0}, {entry: 'to do2', status: 1}]};
+        this.state={todo: [{entry:'Use mongo', status: 0}, {entry: 'Make it fancy', status: 0}, {entry: 'Deploy to Heroku', status: 1}]};
         this.addTodo = this.addTodo.bind(this);
         this.removeTodo = this.removeTodo.bind(this);
         this.check = this.check.bind(this);
@@ -14,7 +14,9 @@ class TodoAppList extends Component{
     }
 
     addTodo(newEntry){
-        this.setState({todo:[...this.state.todo, {entry: newEntry, status: 0}]});
+        if(newEntry !== ''){
+            this.setState({todo:[...this.state.todo, {entry: newEntry, status: 0}]});
+        }        
     }
 
     removeTodo(entry){
