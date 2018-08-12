@@ -16,6 +16,8 @@ class TodoAppList extends Component{
     addTodo(newEntry){
         if(newEntry !== ''){
             this.setState({todo:[...this.state.todo, {entry: newEntry, status: 0}]});
+        }else{
+            this.placeholder = "Please enter a task";
         }        
     }
 
@@ -60,7 +62,7 @@ class TodoAppList extends Component{
     render(){
         return(
             <div className="TodoAppList">
-                <AddEntry addTodo={this.addTodo}/>
+                <AddEntry addTodo={this.addTodo} placeholder={this.placeholder}/>
                 <div className="Todo-title"><h2>To-do:</h2></div>
                 {this.renderList()}
             </div>

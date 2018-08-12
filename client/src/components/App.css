@@ -3,13 +3,13 @@
 }
 
 .App-header {
-  background-color: #B0C4B1;
+  background-color: #0B3954;
   height: 30px;
   padding: 30px;
 }
 
 .App-header a{
-  color: #222;
+  color: #F0F7F4;
   text-align: center;
   padding: 12px;
   font-size: 18px;
@@ -17,8 +17,8 @@
 } 
 
 .App-header a:hover{
-  background-color: teal;
-  color: white;
+  background-color: #59F8E8;
+  color: #222;
 }
 
 /* nav{

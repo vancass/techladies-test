@@ -21,10 +21,8 @@ class AddEntry extends Component{
     render(){
         return(
             <div className="AddEntry">
-                <form>
-                    <input type="text" className="entry-textbox" onChange={this.updateState} value={this.state.entry} required/>
-                    <input type="submit" className="add-btn" onClick={this.add}/>
-                </form>
+                <input type="text" className="entry-textbox" onChange={this.updateState} value={this.state.entry} placeholder="Write a task here"/>
+                <button type="submit" className="add-btn" onClick={this.add}>Add</button>
             </div>
         );
     }
