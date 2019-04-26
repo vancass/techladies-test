@@ -66,7 +66,7 @@ class TodoAppList extends Component {
       <div className="TodoAppList">
         <AddEntry addTodo={this.addTodo} placeholder={this.placeholder} />
         <div className="Todo-title">
-          <h2>To-do:</h2>
+          <h2>To-do list:</h2>
         </div>
         {this.state.todo.map((object, index) => (
           <Todo
